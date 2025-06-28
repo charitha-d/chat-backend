@@ -15,7 +15,10 @@ dotenv.config();
 const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 5000;
-app.use(cors());
+app.use(cors({
+  origin: ['https://your-vercel-app.vercel.app'],
+  credentials: true
+}));
 app.use(express.json()); 
 app.use(cookieParser());
 
