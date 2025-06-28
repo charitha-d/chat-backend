@@ -15,10 +15,10 @@ dotenv.config();
 const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 5000;
-app.use(cors({
-  origin: ['https://your-vercel-app.vercel.app'],
-  credentials: true
-}));
+origin: [
+  'http://localhost:3000',
+  'https://chat-app-frontend-w3p3-pa0jm1tea-charithas-projects-88154584.vercel.app'
+],
 app.use(express.json()); 
 app.use(cookieParser());
 
